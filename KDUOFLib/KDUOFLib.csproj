@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A5955B77-3AE5-4888-A89F-D0702BA3638E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KDUOFLib</RootNamespace>
+    <AssemblyName>KDUOFLib</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Fast.EB.EIP.PrivateMessage, Version=9.0.4234.48998, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Disk\bin\Fast.EB.EIP.PrivateMessage.dll</HintPath>
+    </Reference>
+    <Reference Include="Fast.EB.Organization.Util, Version=10.32.5084.31276, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Disk\bin\Fast.EB.Organization.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="Fast.EB.SystemInfo, Version=10.32.5084.31276, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Disk\bin\Fast.EB.SystemInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Fast.EB.Utility.Configuration, Version=10.32.5078.25316, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Disk\bin\Fast.EB.Utility.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Fast.EB.Utility.Data, Version=10.32.5078.25316, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Disk\bin\Fast.EB.Utility.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Fast.EB.Utility.Task">
+      <HintPath>..\Disk\bin\Fast.EB.Utility.Task.dll</HintPath>
+    </Reference>
+    <Reference Include="Fast.EB.WKF, Version=10.32.5077.31381, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Disk\bin\Fast.EB.WKF.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CFactoryManager.cs" />
+    <Compile Include="DBAddone\Dao.cs" />
+    <Compile Include="DDLObject.cs" />
+    <Compile Include="HRAttendanceTools\CTools.cs" />
+    <Compile Include="HRDataSet.cs">
+      <DependentUpon>HRDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HRDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HRDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HR\PO\AssessCompetentPO.cs" />
+    <Compile Include="HR\PO\CPERTPO.cs" />
+    <Compile Include="HR\PO\CTB_HR_ASSESS_ASSISTAN_MANAGERPO.cs" />
+    <Compile Include="HR\PO\CTB_HR_ASSESS_COMPTENT_DETAILPO.cs" />
+    <Compile Include="HR\PO\CTB_HR_ASSESS_GENERALPO.cs" />
+    <Compile Include="HR\PO\CTB_HR_ASSESS_SERVICEPO.cs" />
+    <Compile Include="HR\PO\CTB_HR_ASSESS_STAFF_DETAILPO.cs" />
+    <Compile Include="HR\PO\CTB_HR_ASSESS_STAFF_PO.cs" />
+    <Compile Include="HR\PO\CTB_HR_CLOCKTIMEPO.cs" />
+    <Compile Include="HR\PO\CTB_HR_CSPO.cs" />
+    <Compile Include="HR\PO\CTB_HR_GROUPPO.cs" />
+    <Compile Include="HR\PO\CTB_HR_JOBTIMEPO.cs" />
+    <Compile Include="HR\PO\CTB_HR_JoinCore_PO.cs" />
+    <Compile Include="HR\PO\CTB_HR_NS_Temp_PO.cs" />
+    <Compile Include="HR\PO\CTB_HR_Nuclear_Salary_PO.cs" />
+    <Compile Include="HR\PO\CTB_HR_OffDuty_PO.cs" />
+    <Compile Include="HR\PO\CTB_HR_PERTPO.cs" />
+    <Compile Include="HR\PO\CTB_HR_QueryDetailPO.cs" />
+    <Compile Include="HR\PO\CTB_HR_STAFF_CARPO.cs" />
+    <Compile Include="HR\PO\WORKTIMEPO.cs" />
+    <Compile Include="HR\UCO\CPERTUCO.cs" />
+    <Compile Include="HR\UCO\CTB_HR_ASSESS_ASSISTAN_MANAGERUCO.cs" />
+    <Compile Include="HR\UCO\CTB_HR_ASSESS_COMPTENT_DETAILUCO.cs" />
+    <Compile Include="HR\UCO\CTB_HR_ASSESS_GENERALUCO.cs" />
+    <Compile Include="HR\UCO\CTB_HR_ASSESS_SEVRICEUCO.cs" />
+    <Compile Include="HR\UCO\CTB_HR_ASSESS_STAFF_DETAILUCO.cs" />
+    <Compile Include="HR\UCO\CTB_HR_ASSESS_STAFF_UCO.cs" />
+    <Compile Include="HR\UCO\CTB_HR_CLOCKTIMEUCO.cs" />
+    <Compile Include="HR\UCO\CTB_HR_CSUCO.cs" />
+    <Compile Include="HR\UCO\CTB_HR_GROUPUCO.cs" />
+    <Compile Include="HR\UCO\CTB_HR_JOBTIMEUCO.cs" />
+    <Compile Include="HR\UCO\CTB_HR_JoinCore_UCO.cs" />
+    <Compile Include="HR\UCO\CTB_HR_NS_TempUCO.cs" />
+    <Compile Include="HR\UCO\CTB_HR_Nuclear_Salary_UCO.cs" />
+    <Compile Include="HR\UCO\CTB_HR_OffDuty_UCO.cs" />
+    <Compile Include="HR\UCO\CTB_HR_PERTUCO.cs" />
+    <Compile Include="HR\UCO\CTB_HR_QueryDetailUCO.cs" />
+    <Compile Include="HR\UCO\CTB_HR_STAFF_CARUCO.cs" />
+    <Compile Include="HR\UCO\WORKTIMEUCO.cs" />
+    <Compile Include="HR\Utility.cs" />
+    <Compile Include="PETContext.cs" />
+    <Compile Include="PETDataSet.cs">
+      <DependentUpon>PETDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PETDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PETDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PET\DataSet\Finance.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Finance.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PET\PO\CAgreePO.cs" />
+    <Compile Include="PET\PO\CPetcomPO.cs" />
+    <Compile Include="PET\PO\CPetitionPO.cs" />
+    <Compile Include="PET\PO\CSponsorPO.cs" />
+    <Compile Include="PET\PO\CSupervisePO.cs" />
+    <Compile Include="PET\PO\CTargetPO.cs" />
+    <Compile Include="PET\PO\CFinancePO.cs" />
+    <Compile Include="PET\UCO\CAgreeUCO.cs" />
+    <Compile Include="PET\UCO\CPetcomUCO.cs" />
+    <Compile Include="PET\UCO\CPetitionUCO.cs" />
+    <Compile Include="PET\UCO\CSponsorUCO.cs" />
+    <Compile Include="PET\UCO\CSuperviseUCO.cs" />
+    <Compile Include="PET\UCO\CTargetUCO.cs" />
+    <Compile Include="PET\UCO\CFinanceUCO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="REWDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REWDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="REW\PO\CBaseawardPO.cs" />
+    <Compile Include="REW\PO\CCarcolorPO.cs" />
+    <Compile Include="REW\PO\CCarmodelPO.cs" />
+    <Compile Include="REW\PO\CCarnamePO.cs" />
+    <Compile Include="REW\PO\CCaryearPO.cs" />
+    <Compile Include="REW\PO\COrderPO.cs" />
+    <Compile Include="REW\PO\CPartPO.cs" />
+    <Compile Include="REW\PO\CQaPO.cs" />
+    <Compile Include="REW\PO\CRewardPO.cs" />
+    <Compile Include="REW\PO\CSaleDocPO.cs" />
+    <Compile Include="REW\PO\CSpecialCntPO.cs" />
+    <Compile Include="REW\PO\CSpecialsalePO.cs" />
+    <Compile Include="REW\PO\CRewardDetailPO.cs" />
+    <Compile Include="REW\PO\CTB_REW_StaffPresentCar_PO.cs" />
+    <Compile Include="REW\PO\Datatable.cs" />
+    <Compile Include="REW\PO\REWDataSetTableAdapters.cs" />
+    <Compile Include="REW\UCO\CBaseawardUCO.cs" />
+    <Compile Include="REW\UCO\CCarcolorUCO.cs" />
+    <Compile Include="REW\UCO\CCarmodelUCO.cs" />
+    <Compile Include="REW\UCO\CCarnameUCO.cs" />
+    <Compile Include="REW\UCO\CCaryearUCO.cs" />
+    <Compile Include="REW\UCO\COrderUCO.cs" />
+    <Compile Include="REW\UCO\CPartUCO.cs" />
+    <Compile Include="REW\UCO\CQaUCO.cs" />
+    <Compile Include="REW\UCO\CRewardUCO.cs" />
+    <Compile Include="REW\UCO\CSaleDocUCO.cs" />
+    <Compile Include="REW\UCO\CSpecialCntUCO.cs" />
+    <Compile Include="REW\UCO\CSpecialsaleUCO.cs" />
+    <Compile Include="REW\UCO\CRewardDetailUCO.cs" />
+    <Compile Include="REW\UCO\CTB_REW_StaffPresentCarUCO.cs" />
+    <Compile Include="REW\Utility.cs" />
+    <Compile Include="TONERDataSet.cs">
+      <DependentUpon>TONERDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TONERDataSet.Designer.cs">
+      <DependentUpon>TONERDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TONER\PO\CCompanyPO.cs" />
+    <Compile Include="TONER\PO\COrderdetailPO.cs" />
+    <Compile Include="TONER\PO\COrderPO.cs" />
+    <Compile Include="TONER\PO\CProjectPO.cs" />
+    <Compile Include="TONER\UCO\CCompanyUCO.cs" />
+    <Compile Include="TONER\UCO\COrderdetailUCO.cs" />
+    <Compile Include="TONER\UCO\COrderUCO.cs" />
+    <Compile Include="TONER\UCO\CProjectUCO.cs" />
+    <Compile Include="TONER\Utility.cs" />
+    <Compile Include="Trigger\HR\ASSESS\EndFormTriggerbyA.cs" />
+    <Compile Include="Trigger\HR\ASSESS\EndFormTriggerbyD.cs" />
+    <Compile Include="Trigger\HR\ASSESS\OnFormTriggerbyA.cs" />
+    <Compile Include="Trigger\HR\ASSESS\OnFormTriggerbyD.cs" />
+    <Compile Include="Trigger\HR\ASSESS\StartFormTriggerbyC.cs" />
+    <Compile Include="Trigger\HR\ASSESS\StartFormTriggerbyE.cs" />
+    <Compile Include="Trigger\HR\EndFlowFormTriggerByAssessAssistanManager.cs" />
+    <Compile Include="Trigger\HR\EndFlowFormTriggerByAssessCompetent.cs" />
+    <Compile Include="Trigger\HR\EndFlowFormTriggerByAssessGeneral.cs" />
+    <Compile Include="Trigger\HR\EndFormTriggerByGeneral.cs" />
+    <Compile Include="Trigger\HR\EndFormTriggerByMinister.cs" />
+    <Compile Include="Trigger\HR\EndFormTriggerbySevrice.cs" />
+    <Compile Include="Trigger\HR\EndFormTriggerbyStaff.cs" />
+    <Compile Include="Trigger\HR\Nuclear_Salary\EndFormTriggerByNSalary.cs" />
+    <Compile Include="Trigger\HR\Nuclear_Salary\EndFromTriggerByNSUpload.cs" />
+    <Compile Include="Trigger\HR\Nuclear_Salary\OnFormTriggerByNSUpload.cs" />
+    <Compile Include="Trigger\HR\OffDuty\EndFormTriggerOffDuty.cs" />
+    <Compile Include="Trigger\HR\OffDuty\OnFormTriggerOffDuty.cs" />
+    <Compile Include="Trigger\HR\OnFlowFormTriggerByAssessAssistanManager.cs" />
+    <Compile Include="Trigger\HR\OnFlowFormTriggerByAssessCompetent.cs" />
+    <Compile Include="Trigger\HR\OnFlowFormTriggerByAssessGeneral.cs" />
+    <Compile Include="Trigger\HR\OnFlowFormTriggerByAssessStaff.cs" />
+    <Compile Include="Trigger\HR\OnFormTriggerbySevrice.cs" />
+    <Compile Include="Trigger\HR\StartFormTriggerbySevrice.cs" />
+    <Compile Include="Trigger\HR\StartFormTriggerbyStaff.cs" />
+    <Compile Include="Trigger\PET\PetBySale\EndFormTrigger.cs" />
+    <Compile Include="Trigger\PET\PetBySale\StartFormTrigger.cs" />
+    <Compile Include="Trigger\REW\EndFormTriggerbySPCar.cs" />
+    <Compile Include="Trigger\REW\RewBySale\EndFormTrigger.cs" />
+    <Compile Include="Trigger\REW\RewBySale\EndFormTriggerBySaleDoc.cs" />
+    <Compile Include="Trigger\REW\RewBySale\StartFormTrigger.cs" />
+    <Compile Include="Trigger\TONER\StartFormTrigger.cs" />
+    <Compile Include="uicommon\CUIContext.cs" />
+    <Compile Include="uicommon\SealedGlobalPage.cs" />
+    <Compile Include="Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HRDataSet.xsc">
+      <DependentUpon>HRDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HRDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HRDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="HRDataSet.xss">
+      <DependentUpon>HRDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PETDataSet.xsc">
+      <DependentUpon>PETDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PETDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PETDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PETDataSet.xss">
+      <DependentUpon>PETDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PET\DataSet\Finance.xsc">
+      <DependentUpon>Finance.xsd</DependentUpon>
+    </None>
+    <None Include="PET\DataSet\Finance.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Finance.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PET\DataSet\Finance.xss">
+      <DependentUpon>Finance.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="REWDataSet.xsc">
+      <DependentUpon>REWDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="REWDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>REWDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="REWDataSet.xss">
+      <DependentUpon>REWDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TONERDataSet.xsc">
+      <DependentUpon>TONERDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TONERDataSet.xsd" />
+    <None Include="TONERDataSet.xss">
+      <DependentUpon>TONERDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
